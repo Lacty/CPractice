@@ -110,21 +110,85 @@ void Prac4_7(const int& xcase) {
 		else if (x < 60)  { printf("不合格"); }
 		break;
 	case 2:
-		if      (x >= 80)           { printf("たいへんよくできました。"); }
-		else if (x >= 60 && x < 80) { printf("よくできました。"); }
-		else if (x < 60)				 { printf("ざんねんでした。"); }
+		if      (x >= 80) { printf("たいへんよくできました。"); }
+		else if (x >= 60) { printf("よくできました。"); }
+		else if (x < 60)	{ printf("ざんねんでした。"); }
 		break;
 	case 3:
-		if      (x >= 80)           { printf("優"); }
-		else if (x >= 70 && x < 80) { printf("良"); }
-		else if (x >= 60 && x < 70) { printf("可"); }
-		else if (x < 60)            { printf("不可"); }
+		if      (x >= 80) { printf("優"); }
+		else if (x >= 70) { printf("良"); }
+		else if (x >= 60) { printf("可"); }
+		else if (x < 60)  { printf("不可"); }
+		break;
+	}
+}
+
+/*
+	練習問題 4 - 8
+	中間試験と、期末試験の点数（それぞれ 0 ～ 100 点）を入力し、次の条件に従って合格、不合格を判定するプログラムを作成しなさい。
+
+	両方とも 60 点以上の場合、合格
+	合計が 130 点以上の場合、合格
+	合計が 100 点以上で、どちらかの試験が 90 点以上であれば合格
+	上記以外は不合格
+*/
+void Prac4_8() {
+	int mid, end;
+	printf("中間試験の点数を入力してください:");
+	scanf("%d", &mid);
+	printf("期末試験の点数入力してください:");
+	scanf("%d", &end);
+
+	if      (mid >= 60 && end >= 60)                             { printf("合格"); }
+	else if (mid + end >= 130)                                   { printf("合格"); }
+	else if ((mid + end >= 100) && ((mid >= 90) || (end >= 90))) { printf("合格"); }
+	else                                                         { printf("不合格"); }
+}
+
+/*
+	練習問題 4 - 9
+	曜日と、午前、午後、夜間の区別を入力し、病院が開いているか、休診であるかを表示するプログラムを作成しなさい。
+	
+	開いているか、休診であるかは、次の表に従います。
+	      日曜	月曜	火曜	水曜	木曜	金曜	土曜
+	午前	休診	○	   休診	○	   ○	   休診	○
+	午後	休診	○	   ○	   ○	   ○	   ○	   休診
+	夜間	休診	○	   ○	   休診	○	   ○	   休診
+*/
+void Prac4_9() {
+	printf("> 0 = 日曜、1 = 月曜、2 = 火曜、3 = 水曜、4 = 木曜、5 = 金曜、6 = 土曜\n");
+	printf(">0=午前、1=午後、2=夜間\n");
+	
+	int am[] = { 0, 1, 0, 1, 1, 0, 1 };
+	int pm[] = { 0, 1, 1, 1, 1, 1, 0 };
+	int mn[] = { 0, 1, 1, 0, 1, 1, 0 };
+
+	int week;
+	int zone;
+
+	printf("曜日を数字で入力してください:");
+	scanf("%d", &week);
+	printf("時間帯を数字で入力してください:");
+	scanf("%d", &zone);
+
+	switch (zone) {
+	case 0:
+		if (am[week] == 0) { printf("休診です"); }
+		else					 { printf("営業しています"); }
+		break;
+	case 1:
+		if (pm[week] == 0) { printf("休診です"); }
+		else					 { printf("営業しています"); }
+		break;
+	case 2:
+		if (mn[week] == 0) { printf("休診です"); }
+		else					 { printf("営業しています"); }
 		break;
 	}
 }
 
 
-
 int main() {
+	Prac4_9();
 	return 0;
 }
