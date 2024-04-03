@@ -109,3 +109,63 @@ void Prac5_10() {
       printf("*");
    }
 }
+
+void Prac5_11() {
+   int x;
+   scanf("%d", &x);
+   for (int i = 0; i < x; i++) {
+      printf("%d", i);
+      if (i == 9) {
+         i = 0;
+         x -= 10;
+      }
+   }
+}
+
+void Prac5_12() {
+   int x = 1;
+   for (int i = 0; i < 1000; i++) {
+      x *= 3;
+      printf("%d ", x);
+      i = x;
+   }
+}
+
+void Prac5_13() {
+   int x;
+   int sum = 0;
+   while (sum < 100) {
+      scanf("%d", &x);
+      sum += x;
+      printf("%d\n", sum);
+   }
+}
+
+void Prac5_14() {
+   int x;
+   int strike = 0;
+   int ball = 0;
+
+   while ((ball < 4) && (strike < 3)) {
+      printf("ストライク = 1 or ボール = 2\n");
+      scanf("%d", &x);
+      if (x == 1) strike++;
+      else ball++;
+   }
+   printf("ストライク:%d ボール:%d", strike, ball);
+}
+
+void Prac5_15() {
+   int x;
+   int strike = 0;
+   int ball = 0;
+
+   while ((ball < 4) && (strike < 3)) {
+      printf("ストライク = 1 or ボール = 2 or ファウル = 3\n");
+      scanf("%d", &x);
+      if (x == 1) strike++;
+      else if (x == 2) ball++;
+      else if (strike < 2) strike++;
+   }
+   printf("ストライク:%d ボール:%d", strike, ball);
+}
