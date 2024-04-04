@@ -169,3 +169,39 @@ void Prac5_15() {
    }
    printf("ストライク:%d ボール:%d", strike, ball);
 }
+
+void Prac5_16() {
+   int sosu;
+   printf("数値(4以上)を入力して下さい");
+   scanf("%d", &sosu);
+   for (int i = 2; i < sosu; i++) {
+      if (sosu % i == 0) {
+         printf("素数ではありません");
+         return;
+      }
+   }
+   printf("素数です");
+}
+
+void Prac5_17() {
+   int x;
+   printf("素因数分解したい数値を入力してください\n");
+   scanf("%d", &x);
+   
+   for (int i = 2; i < x + 1; i++) {
+      if (x % i == 0) {
+         printf("%d ", i);
+         x = x / i;
+         i = 1;
+      }
+   }
+}
+
+void Prac5_18() {
+   for (int y = 1; y < 10; y++) {
+      for (int x = 1; x < 10; x++) {
+         printf("%2d ", x * y);
+      }
+      printf("\n");
+   }
+}

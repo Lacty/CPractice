@@ -3,6 +3,6 @@
 #include "prac5.h"
 
 int main() {
-	Prac5_15();
+	Prac5_18();
 	return 0;
 }
