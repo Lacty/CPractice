@@ -205,3 +205,71 @@ void Prac5_18() {
       printf("\n");
    }
 }
+
+void Prac5_19() {
+   int sum = 0;
+   int n = -1;
+
+   while (n != 0) {
+      scanf("%d", &n);
+      if (n == 0) break;
+      sum += n;
+   }
+   printf("çáåv:%d", sum);
+}
+
+void Prac5_20() {
+   int sum = 0;
+   int n = -1;
+   int i = 0;
+
+   while (n != 0) {
+      scanf("%d", &n);
+      if (n == 0) break;
+      sum += n;
+      i++;
+   }
+   printf("ïΩãœíl:%d", sum / i);
+}
+
+void Prac5_21() {
+   int n;
+   scanf("%d", &n);
+   for (int i = 0; i <= n; i++) {
+      for (int y = 0; y < i; y++) {
+         printf("$");
+      }
+      printf("\n");
+   }
+}
+
+void Prac5_22() {
+   int n;
+   scanf("%d", &n);
+
+   for (int i = 0; i < n; i++) {
+      for (int y = 0; y < n; y++) {
+         if (i == y || (i + y + 1) == n) {
+            printf("X");
+         }
+         else {
+            printf(" ");
+         }
+      }
+      printf("\n");
+   }
+}
+
+void Prac5_23() {
+   int prev = 0;
+   int n = 1;
+   int temp;
+   printf("0, 1, ");
+   while (true) {
+      temp = prev + n;
+      if (temp >= 1000) break;
+      printf("%d, ", temp);
+      prev = n;
+      n = temp;
+   }
+}
