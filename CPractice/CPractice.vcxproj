@@ -127,13 +127,15 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="CPractice.cpp" />
-    <ClCompile Include="prac4.cpp" />
-    <ClCompile Include="prac5.cpp" />
+    <ClCompile Include="CPractice.c" />
+    <ClCompile Include="prac4.c" />
+    <ClCompile Include="prac5.c" />
+    <ClCompile Include="prac6.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="prac4.h" />
     <ClInclude Include="prac5.h" />
+    <ClInclude Include="prac6.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -1,8 +1,9 @@
 ﻿
 #include "prac4.h"
 #include "prac5.h"
+#include "prac6.h"
 
 int main() {
-	Prac5_23();
+	Prac6_8();
 	return 0;
 }

@@ -265,7 +265,7 @@ void Prac5_23() {
    int n = 1;
    int temp;
    printf("0, 1, ");
-   while (true) {
+   while (1) {
       temp = prev + n;
       if (temp >= 1000) break;
       printf("%d, ", temp);

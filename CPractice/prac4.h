@@ -56,7 +56,7 @@ void Prac4_6();
 	60 点以上、70 点未満：“可”
 	60 点未満：“不可”
 */
-void Prac4_7(const int& xcase);
+void Prac4_7(const int xcase);
 
 /*
 	練習問題 4 - 8

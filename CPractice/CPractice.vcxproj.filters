@@ -15,13 +15,16 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="CPractice.cpp">
+    <ClCompile Include="CPractice.c">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
-    <ClCompile Include="prac4.cpp">
+    <ClCompile Include="prac4.c">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
-    <ClCompile Include="prac5.cpp">
+    <ClCompile Include="prac5.c">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="prac6.c">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
   </ItemGroup>
@@ -30,6 +33,9 @@
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
     <ClInclude Include="prac5.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="prac6.h">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
   </ItemGroup>

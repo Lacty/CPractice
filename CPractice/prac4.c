@@ -64,7 +64,7 @@ void Prac4_6() {
 		}
 }
 
-void Prac4_7(const int& xcase) {
+void Prac4_7(const int xcase) {
 	int x;
 	printf("テストの点数を入力してください:");
 	scanf("%d", &x);
